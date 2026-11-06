@@ -103,7 +103,7 @@ export const programmes = {
 };
 
 export const enrol = {
-  eyebrow: "Enrol",
+  eyebrow: "Enroll",
   title: "Where would you like to begin?",
   body: "Every journey starts with a conversation. A short assessment helps us understand where your child stands and which programme will help them grow.",
   cta: "Request an assessment",
@@ -112,6 +112,6 @@ export const enrol = {
 export const nav = [
   { label: "Approach", href: "#approach" },
   { label: "Programmes", href: "#programmes" },
-  { label: "Enrrol", href: "#enrol" },
+  { label: "Enroll", href: "#enrol" },
 ];
 

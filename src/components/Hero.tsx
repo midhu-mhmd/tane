@@ -119,7 +119,7 @@ export default function Hero() {
               <Arrow />
             </a>
             <a href="#enrol" className="btn btn-outline-light">
-              Enrol a learner
+              Enroll a learner
             </a>
           </div>
         </div>
