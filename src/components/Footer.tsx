@@ -38,6 +38,7 @@ export default function Footer() {
   }, [fits]);
 
   useIsoLayoutEffect(() => {
+    const mainEl = document.getElementById("main");
     const mm = gsap.matchMedia(root.current!);
     mm.add(MQ.desktop, () => {
       gsap.fromTo(
@@ -48,10 +49,12 @@ export default function Footer() {
           y: 0,
           ease: "none",
           scrollTrigger: {
-            trigger: "#main",
+            trigger: mainEl,
             start: "bottom bottom", // main's end reaches viewport bottom = reveal begins
             end: "max", // …to the very end of the page
             scrub: true,
+            invalidateOnRefresh: true,
+            refreshPriority: -1, // always compute after pinned sections inside #main
           },
         }
       );
@@ -64,7 +67,7 @@ export default function Footer() {
       ref={root}
       className={`${fits ? "motion-safe:sticky" : "relative"} bottom-0 z-0 -mt-12 overflow-hidden bg-teal text-white`}
     >
-      <div className="mx-auto max-w-[1280px] px-6 pt-32 md:px-10 md:pt-28">
+      <div className="mx-auto max-w-[1280px] px-6 pt-24 md:px-10 md:pt-24">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr] md:gap-10">
           <div data-fade>
             <p className="font-display text-3xl font-extrabold leading-[0.95] tracking-[-0.04em] md:text-4xl">{site.tagline}</p>
@@ -121,7 +124,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col justify-between gap-2 border-t border-white/15 pt-6 text-sm font-light md:flex-row">
+        <div className="mt-10 flex flex-col justify-between gap-2 border-t border-white/15 pt-5 text-sm font-light md:flex-row">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <p>
             <a className="link-underline" href="[/privacy]">Privacy</a>
@@ -132,8 +135,8 @@ export default function Footer() {
       </div>
 
       {/* Giant wordmark rising into place */}
-      <div aria-hidden="true" className="mx-auto flex max-w-[1280px] justify-center overflow-hidden px-6 pt-10 md:px-10">
-        <div data-fade className="footer-mark -mb-[4%] w-[min(80vw,560px,58svh)] text-lime">
+      <div aria-hidden="true" className="mx-auto flex max-w-[1280px] justify-center overflow-hidden px-6 pb-8 pt-6 md:px-10 md:pb-10 md:pt-8">
+        <div data-fade className="footer-mark w-[min(76vw,480px,36svh)] text-lime">
           <Logo className="logo w-full" />
         </div>
       </div>

@@ -17,6 +17,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   font-weight: 300;
   letter-spacing: 0.01em;
   line-height: 1.65;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -231,9 +233,6 @@ ul[tabindex]:focus-visible {
   }
   .js .enrol-media {
     clip-path: inset(12% 12% 12% 12% round 48px);
-  }
-  .js .footer-mark {
-    transform: translateY(45%);
   }
 }
 @media (max-width: 767px), (prefers-reduced-motion: reduce) {
