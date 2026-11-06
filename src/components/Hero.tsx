@@ -79,7 +79,7 @@ export default function Hero() {
       ref={root}
       id="top"
       aria-labelledby="hero-title"
-      className="relative z-0 isolate overflow-hidden bg-teal text-white md:min-h-[max(100svh,720px)]"
+      className="relative z-0 isolate overflow-hidden bg-teal text-white md:min-h-[max(100svh,45rem)]"
     >
       {/* ③ Drift layer sits above the photo's flat teal, below the text. */}
       <div
@@ -89,14 +89,14 @@ export default function Hero() {
       {/* Soft arc */}
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute -left-40 -top-40 h-[640px] w-[640px] text-white/[0.05]"
+        className="pointer-events-none absolute -left-40 -top-40 h-[40rem] w-[40rem] text-white/[0.05]"
         viewBox="0 0 640 640"
         fill="none"
       >
         <circle cx="320" cy="320" r="270" stroke="currentColor" strokeWidth="70" />
       </svg>
 
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6 pb-12 pt-24 md:px-10 md:pb-24 md:pt-24 lg:pt-28">
+      <div className="relative z-10 mx-auto max-w-[84rem] px-6 pb-12 pt-24 md:px-10 md:pb-24 md:pt-24 lg:pt-28">
         <div data-fade>
           <p className="hero-sub eyebrow mb-4 text-white md:mb-5">{site.subTagline}</p>
           <h1
@@ -110,7 +110,7 @@ export default function Hero() {
               </span>
             ))}
           </h1>
-          <p className="hero-sub mt-5 max-w-[34ch] text-[18px] font-light leading-[1.65] tracking-[0.01em] text-white md:mt-6 md:text-[20px]">
+          <p className="hero-sub mt-5 max-w-[34ch] text-[1.125rem] font-light leading-[1.65] tracking-[0.01em] text-white md:mt-6 md:text-[1.25rem]">
             {site.description}
           </p>
           <div className="hero-sub mt-6 flex flex-wrap gap-3 md:mt-7">
@@ -127,13 +127,13 @@ export default function Hero() {
 
       {/* Media: absolutely placed bottom-right on tablet/desktop; in flow on mobile.
           `priority` = preloaded + fetchpriority=high for a fast LCP. */}
-      <div className="hero-media pointer-events-none relative md:absolute md:bottom-0 md:right-0 md:w-[min(100%,1180px)]">
+      <div className="hero-media pointer-events-none relative md:absolute md:bottom-0 md:right-0 md:w-[min(100%,76rem)]">
         <Image
           src={hero}
           alt="A learner in headphones takes notes while a teacher explains a lesson on a laptop."
           priority
           quality={95}
-          sizes="(min-width: 1180px) 1180px, 100vw"
+          sizes="(min-width: 768px) 82vw, 100vw"
           className="hero-mask h-auto w-full"
           placeholder="blur"
         />

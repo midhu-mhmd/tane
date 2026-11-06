@@ -43,15 +43,15 @@ export default function Enrol() {
       ref={root}
       id="enrol"
       aria-labelledby="enrol-title"
-      className="sheet relative z-[5] -mt-12 rounded-b-[48px] bg-lime text-ink"
+      className="sheet relative z-[5] -mt-12 rounded-b-[3rem] bg-lime text-ink"
     >
-      <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 pb-28 pt-24 md:grid-cols-[1.1fr_1fr] md:gap-16 md:px-10 md:pb-40 md:pt-32">
-        <div data-fade className="enrol-media overflow-hidden rounded-[40px]">
+      <div className="mx-auto grid max-w-[84rem] items-center gap-12 px-6 pb-28 pt-24 md:grid-cols-[1.1fr_1fr] md:gap-16 md:px-10 md:pb-40 md:pt-32">
+        <div data-fade className="enrol-media overflow-hidden rounded-[2.5rem]">
           <Image
             src={sceneCalendar}
             alt="A smiling father points at a laptop screen beside his son, next to a desk calendar with a date ticked."
             quality={95}
-            sizes="(min-width: 768px) 640px, 100vw"
+            sizes="(min-width: 768px) 48vw, 100vw"
             className="h-auto w-full"
             placeholder="blur"
           />
@@ -68,7 +68,7 @@ export default function Enrol() {
           >
             {enrol.title}
           </h2>
-          <p data-fade className="mt-6 max-w-[40ch] text-[18px] font-light leading-[1.65] tracking-[0.01em] md:text-[20px]">
+          <p data-fade className="mt-6 max-w-[40ch] text-[1.125rem] font-light leading-[1.65] tracking-[0.01em] md:text-[1.25rem]">
             {enrol.body}
           </p>
           <div data-fade className="mt-10 flex flex-wrap items-center gap-8">

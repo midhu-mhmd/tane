@@ -59,41 +59,41 @@ export default function TearCalendar() {
         if (window.matchMedia("(hover: hover)").matches) return;
         peel(!open);
       }}
-      className="group relative h-[132px] w-[116px] shrink-0 rounded-[18px] [perspective:600px]"
+      className="group relative h-[8.25rem] w-[7.25rem] shrink-0 rounded-[1.125rem] [perspective:600px]"
     >
       {/* Page stack edges (skeuomorphic depth) */}
-      <span aria-hidden="true" className="absolute inset-x-2 -bottom-[6px] top-3 rounded-[16px] bg-white/60 shadow-[0_10px_24px_-12px_rgba(11,59,58,0.45)]" />
-      <span aria-hidden="true" className="absolute inset-x-1 -bottom-[3px] top-2 rounded-[16px] bg-white/80" />
+      <span aria-hidden="true" className="absolute inset-x-2 -bottom-[0.375rem] top-3 rounded-[1rem] bg-white/60 shadow-[0_10px_24px_-12px_rgba(11,59,58,0.45)]" />
+      <span aria-hidden="true" className="absolute inset-x-1 -bottom-[0.1875rem] top-2 rounded-[1rem] bg-white/80" />
 
       {/* Under page — the reveal */}
-      <span aria-hidden="true" className="absolute inset-0 flex flex-col overflow-hidden rounded-[16px] bg-white text-ink shadow-[0_1px_0_rgba(11,59,58,0.08)]">
-        <span className="bg-teal pb-1.5 pt-4 text-[9px] font-semibold uppercase tracking-[0.22em] text-white">Next intake</span>
+      <span aria-hidden="true" className="absolute inset-0 flex flex-col overflow-hidden rounded-[1rem] bg-white text-ink shadow-[0_1px_0_rgba(11,59,58,0.08)]">
+        <span className="bg-teal pb-1.5 pt-4 text-[0.5625rem] font-semibold uppercase tracking-[0.22em] text-white">Next intake</span>
         <span className="flex flex-1 flex-col items-center justify-center">
-          <span className="font-display text-[40px] font-extrabold leading-none tracking-[-0.04em]">{site.nextIntake.day}</span>
-          <span className="mt-1.5 text-[11px] font-medium">{site.nextIntake.month}</span>
+          <span className="font-display text-[2.5rem] font-extrabold leading-none tracking-[-0.04em]">{site.nextIntake.day}</span>
+          <span className="mt-1.5 text-[0.6875rem] font-medium">{site.nextIntake.month}</span>
         </span>
       </span>
 
       {/* Top page — peels away */}
-      <span aria-hidden="true" className="cal-top absolute inset-0 flex flex-col overflow-hidden rounded-[16px] bg-white text-ink will-change-transform">
-        <span className="bg-teal pb-1.5 pt-4 text-[9px] font-semibold uppercase tracking-[0.22em] text-white">Tane</span>
+      <span aria-hidden="true" className="cal-top absolute inset-0 flex flex-col overflow-hidden rounded-[1rem] bg-white text-ink will-change-transform">
+        <span className="bg-teal pb-1.5 pt-4 text-[0.5625rem] font-semibold uppercase tracking-[0.22em] text-white">Tane</span>
         <span className="flex flex-1 flex-col items-center justify-center gap-2">
           <svg className="h-9 w-7 text-teal" viewBox="0 0 68 130" fill="none" stroke="currentColor" strokeWidth={7} strokeLinecap="round">
             <path d="M35 4 C18 24 3 46 3 76 C3 104 18 120 34 126 C46 122 57 115 65 103" />
             <path d="M35 4 C51 22 63 44 63 64 C63 78 59 88 52 96" />
             <path d="M38 74 C43 84 42 93 34 101" />
           </svg>
-          <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-ink">Peek</span>
+          <span className="text-[0.625rem] font-semibold uppercase tracking-[0.22em] text-ink">Peek</span>
         </span>
         {/* dog-ear hint */}
-        <span className="absolute bottom-0 right-0 h-5 w-5 rounded-tl-[8px] bg-[linear-gradient(135deg,#ffffff_45%,rgba(11,59,58,0.12)_50%,rgba(11,59,58,0.04))] transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-125 origin-bottom-right" />
+        <span className="absolute bottom-0 right-0 h-5 w-5 rounded-tl-[0.5rem] bg-[linear-gradient(135deg,#ffffff_45%,rgba(11,59,58,0.12)_50%,rgba(11,59,58,0.04))] transition-transform duration-500 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-125 origin-bottom-right" />
         <span className="cal-shade pointer-events-none absolute inset-0 bg-ink opacity-0" />
       </span>
 
       {/* Binding rings sit above both pages */}
-      <span aria-hidden="true" className="absolute inset-x-0 -top-[5px] z-10 flex justify-center gap-10">
-        <span className="h-3 w-[5px] rounded-full bg-ink/80 shadow-[0_1px_0_rgba(255,255,255,0.6)]" />
-        <span className="h-3 w-[5px] rounded-full bg-ink/80 shadow-[0_1px_0_rgba(255,255,255,0.6)]" />
+      <span aria-hidden="true" className="absolute inset-x-0 -top-[0.3125rem] z-10 flex justify-center gap-10">
+        <span className="h-3 w-[0.3125rem] rounded-full bg-ink/80 shadow-[0_1px_0_rgba(255,255,255,0.6)]" />
+        <span className="h-3 w-[0.3125rem] rounded-full bg-ink/80 shadow-[0_1px_0_rgba(255,255,255,0.6)]" />
       </span>
     </button>
   );

@@ -67,11 +67,11 @@ export default function Approach() {
       className="sheet relative z-[3] -mt-12 overflow-hidden bg-teal text-white md:flex md:min-h-svh md:items-center"
     >
       {/* Soft arc */}
-      <svg aria-hidden="true" className="pointer-events-none absolute -right-48 -top-48 h-[620px] w-[620px] text-white/[0.05]" viewBox="0 0 620 620" fill="none">
+      <svg aria-hidden="true" className="pointer-events-none absolute -right-48 -top-48 h-[38.75rem] w-[38.75rem] text-white/[0.05]" viewBox="0 0 620 620" fill="none">
         <circle cx="310" cy="310" r="260" stroke="currentColor" strokeWidth="64" />
       </svg>
 
-      <div className="relative mx-auto w-full max-w-[1280px] px-6 py-24 md:px-10 md:pb-16 md:pt-28">
+      <div className="relative mx-auto w-full max-w-[84rem] px-6 py-24 md:px-10 md:pb-16 md:pt-28">
         <div className="grid items-center gap-10 md:grid-cols-[1.05fr_1fr] md:gap-16">
           <div>
             <p data-fade className="eyebrow mb-6 text-white">
@@ -84,16 +84,16 @@ export default function Approach() {
             >
               {approach.title}
             </h2>
-            <p data-fade className="mt-6 max-w-[46ch] text-[18px] font-light leading-[1.65] tracking-[0.01em] text-white md:text-[20px]">
+            <p data-fade className="mt-6 max-w-[46ch] text-[1.125rem] font-light leading-[1.65] tracking-[0.01em] text-white md:text-[1.25rem]">
               {approach.body}
             </p>
           </div>
-          <div data-fade className="approach-card overflow-hidden rounded-[40px] shadow-[0_30px_60px_-30px_rgba(11,59,58,0.6)] md:aspect-[1264/848] md:h-[min(38svh,380px)] md:w-auto md:justify-self-end">
+          <div data-fade className="approach-card overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_-30px_rgba(11,59,58,0.6)] md:aspect-[1264/848] md:h-[min(38svh,26rem)] md:w-auto md:justify-self-end">
             <Image
               src={scenePath}
               alt="A boy with a backpack walks a winding path past icons for reading, community and achievement toward a glowing graduation cap."
               quality={95}
-              sizes="(min-width: 768px) 560px, 100vw"
+              sizes="(min-width: 768px) 45vw, 100vw"
               className="h-full w-full object-cover"
               placeholder="blur"
             />
@@ -101,23 +101,23 @@ export default function Approach() {
         </div>
 
         {/* Timeline */}
-        <div className="relative mt-16 md:mt-[min(7svh,72px)]">
-          {/* Desktop: horizontal line through node centres (node = 72px → centre 36px). */}
-          <div aria-hidden="true" className="absolute inset-x-0 top-[33px] hidden h-[6px] rounded-full bg-white/10 md:block" />
-          <div aria-hidden="true" className="approach-line absolute inset-x-0 top-[33px] hidden h-[6px] origin-left rounded-full bg-lime md:block" />
+        <div className="relative mt-16 md:mt-[min(7svh,4.5rem)]">
+          {/* Desktop: horizontal line through node centres (node = 4.5rem → centre 2.25rem - 0.1875rem = 2.0625rem). */}
+          <div aria-hidden="true" className="absolute inset-x-0 top-[2.0625rem] hidden h-[0.375rem] rounded-full bg-white/10 md:block" />
+          <div aria-hidden="true" className="approach-line absolute inset-x-0 top-[2.0625rem] hidden h-[0.375rem] origin-left rounded-full bg-lime md:block" />
           {/* Mobile: static vertical line */}
-          <div aria-hidden="true" className="absolute bottom-8 left-[27px] top-8 w-[4px] rounded-full bg-lime md:hidden" />
+          <div aria-hidden="true" className="absolute bottom-8 left-[1.6875rem] top-8 w-[0.25rem] rounded-full bg-lime md:hidden" />
 
           <ol className="relative grid gap-10 md:grid-cols-3 md:gap-8">
             {approach.steps.map((step, i) => (
               <li key={step.title} data-fade className="approach-node flex gap-5 md:flex-col md:items-center md:text-center">
-                <span className="approach-dot grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-ink shadow-[0_12px_30px_-10px_rgba(11,59,58,0.55)] md:h-[72px] md:w-[72px]">
+                <span className="approach-dot grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-ink shadow-[0_12px_30px_-10px_rgba(11,59,58,0.55)] md:h-[4.5rem] md:w-[4.5rem]">
                   <StepIcon name={step.icon} />
                 </span>
                 <div className="approach-copy pt-2 md:pt-6">
                   <p className="eyebrow mb-2 text-white">Step 0{i + 1}</p>
                   <h3 className="font-display text-xl font-extrabold leading-[1.05] tracking-[-0.03em] md:text-2xl">{step.title}</h3>
-                  <p className="mx-auto mt-2 max-w-[32ch] text-[17px] font-light leading-[1.65] tracking-[0.01em] text-white">{step.text}</p>
+                  <p className="mx-auto mt-2 max-w-[32ch] text-[1.0625rem] font-light leading-[1.65] tracking-[0.01em] text-white">{step.text}</p>
                 </div>
               </li>
             ))}

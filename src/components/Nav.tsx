@@ -26,7 +26,7 @@ export default function Nav() {
       <nav
         aria-label="Primary"
         data-floating={floating}
-        className={`group/nav relative mx-auto flex h-14 max-w-[1120px] items-center justify-between rounded-full pl-5 pr-2 md:h-16 md:pl-7 ${floating ? "text-teal" : "text-white"
+        className={`group/nav relative mx-auto flex h-14 max-w-[72rem] items-center justify-between rounded-full pl-5 pr-2 md:h-16 md:pl-7 ${floating ? "text-teal" : "text-white"
           }`}
       >
         {/* Pill background — fades/scales in after THRESHOLD. transform + opacity only. */}
@@ -44,7 +44,7 @@ export default function Nav() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="link-underline rounded-full px-4 py-2 text-[15px] font-medium tracking-[0.01em]"
+                className="link-underline rounded-full px-4 py-2 text-[0.9375rem] font-medium tracking-[0.01em]"
               >
                 {item.label}
               </a>
@@ -52,7 +52,7 @@ export default function Nav() {
           ))}
         </ul>
 
-        <a href="#enrol" className="btn btn-lime h-10 px-5 text-[15px] font-semibold md:h-11">
+        <a href="#enrol" className="btn btn-lime h-10 px-5 text-[0.9375rem] font-semibold md:h-11">
           Join us
         </a>
       </nav>

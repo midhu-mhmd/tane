@@ -15,6 +15,9 @@
 }
 
 html {
+  /* Scales fluidly with viewport width from laptop (1260px) up to 4K/ultrawide (2560px+),
+     so all rem-based typography, containers, cards, and spacing grow together. */
+  font-size: clamp(14px, 1.1111vw, 28px);
   -webkit-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   overflow-x: clip;
@@ -61,13 +64,13 @@ body::after {
 /* ── Sheets: sections overlap the previous one with rounded tops ───────
    Smooth sheet transition — each section slides over the last like a card. */
 .sheet {
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
 }
 @media (min-width: 768px) {
   .sheet {
-    border-top-left-radius: 56px;
-    border-top-right-radius: 56px;
+    border-top-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
   }
 }
 

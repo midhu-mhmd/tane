@@ -67,7 +67,7 @@ export default function Footer() {
       ref={root}
       className={`${fits ? "motion-safe:sticky" : "relative"} bottom-0 z-0 -mt-12 overflow-hidden bg-teal text-white`}
     >
-      <div className="mx-auto max-w-[1280px] px-6 pt-24 md:px-10 md:pt-24">
+      <div className="mx-auto max-w-[84rem] px-6 pt-24 md:px-10 md:pt-24">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr] md:gap-10">
           <div data-fade>
             <p className="font-display text-3xl font-extrabold leading-[0.95] tracking-[-0.04em] md:text-4xl">{site.tagline}</p>
@@ -135,8 +135,8 @@ export default function Footer() {
       </div>
 
       {/* Giant wordmark rising into place */}
-      <div aria-hidden="true" className="mx-auto flex max-w-[1280px] justify-center overflow-hidden px-6 pb-8 pt-6 md:px-10 md:pb-10 md:pt-8">
-        <div data-fade className="footer-mark w-[min(76vw,480px,36svh)] text-lime">
+      <div aria-hidden="true" className="mx-auto flex max-w-[84rem] justify-center overflow-hidden px-6 pb-8 pt-6 md:px-10 md:pb-10 md:pt-8">
+        <div data-fade className="footer-mark w-[min(78vw,40rem,36svh)] text-lime">
           <Logo className="logo w-full" />
         </div>
       </div>

@@ -49,8 +49,9 @@ export default function Programmes() {
           scrollTrigger: {
             trigger: next,
             start: "top bottom", // next card starts entering
-            end: `top ${STICKY_TOP + (i + 1) * 16}px`, // next card has docked
+            end: () => `top ${(7 + i + 1) * parseFloat(getComputedStyle(document.documentElement).fontSize)}px`, // next card has docked
             scrub: true,
+            invalidateOnRefresh: true,
           },
         });
         tl.to(card.querySelector(".prog-inner"), { scale: SCALE_TO }, 0).to(
@@ -106,7 +107,7 @@ export default function Programmes() {
       className="sheet relative z-[4] -mt-12 bg-white pb-24 text-ink md:pb-40"
     >
       {/* Header with the programme-choice scene */}
-      <div className="mx-auto grid max-w-[1280px] items-end gap-10 px-6 pb-14 pt-28 md:grid-cols-[1fr_0.9fr] md:gap-16 md:px-10 md:pb-20 md:pt-36">
+      <div className="mx-auto grid max-w-[84rem] items-end gap-10 px-6 pb-14 pt-28 md:grid-cols-[1fr_0.9fr] md:gap-16 md:px-10 md:pb-20 md:pt-36">
         <div>
           <p data-fade className="eyebrow mb-6 text-teal">
             {programmes.eyebrow}
@@ -118,16 +119,16 @@ export default function Programmes() {
           >
             {programmes.title}
           </h2>
-          <p data-fade className="mt-6 max-w-[42ch] text-[18px] font-light leading-[1.65] tracking-[0.01em] md:text-[20px]">
+          <p data-fade className="mt-6 max-w-[42ch] text-[1.125rem] font-light leading-[1.65] tracking-[0.01em] md:text-[1.25rem]">
             {programmes.body}
           </p>
         </div>
-        <div data-fade className="overflow-hidden rounded-[36px]">
+        <div data-fade className="overflow-hidden rounded-[2.25rem]">
           <Image
             src={sceneProgrammes}
             alt="A girl rests her chin on her hand, smiling as she considers four programme cards floating above her."
             quality={95}
-            sizes="(min-width: 768px) 560px, 100vw"
+            sizes="(min-width: 768px) 45vw, 100vw"
             className="h-auto w-full"
             placeholder="blur"
           />
@@ -135,7 +136,7 @@ export default function Programmes() {
       </div>
 
       {/* Cards: carousel on mobile, sticky stack from md up */}
-      <div data-fade className="mx-auto max-w-[1280px] md:px-10">
+      <div data-fade className="mx-auto max-w-[84rem] md:px-10">
         <p className="eyebrow mb-4 px-6 text-teal md:hidden" aria-hidden="true">
           Swipe to explore →
         </p>
@@ -151,10 +152,10 @@ export default function Programmes() {
               <li
                 key={p.name}
                 className="prog-card w-[84vw] shrink-0 snap-center md:mb-8 md:w-auto motion-safe:md:sticky"
-                style={{ top: `${STICKY_TOP + i * 16}px` }}
+                style={{ top: `${7 + i}rem` }}
               >
                 <article
-                  className={`prog-inner relative isolate flex h-[min(560px,78svh)] origin-top flex-col overflow-hidden rounded-[36px] md:h-[min(560px,72svh)] md:flex-row md:rounded-[48px] ${
+                  className={`prog-inner relative isolate flex h-[min(35rem,78svh)] origin-top flex-col overflow-hidden rounded-[2.25rem] md:h-[min(35rem,72svh)] md:flex-row md:rounded-[3rem] ${
                     teal ? "bg-teal text-white" : "bg-lime text-ink"
                   }`}
                 >
@@ -163,10 +164,10 @@ export default function Programmes() {
                     <h3 className="mt-auto max-w-[12ch] font-display text-[clamp(2rem,4.4vw,4rem)] font-extrabold leading-[0.95] tracking-[-0.04em] md:mt-auto">
                       {p.name}
                     </h3>
-                    <p className="mt-4 max-w-[38ch] text-[18px] font-light leading-[1.65] tracking-[0.01em] md:text-[20px]">{p.line}</p>
+                    <p className="mt-4 max-w-[38ch] text-[1.125rem] font-light leading-[1.65] tracking-[0.01em] md:text-[1.25rem]">{p.line}</p>
                     <a
                       href={p.href}
-                      className={`link-arrow mt-6 inline-flex items-center gap-2 self-start rounded-full text-[15px] font-semibold ${
+                      className={`link-arrow mt-6 inline-flex items-center gap-2 self-start rounded-full text-[0.9375rem] font-semibold ${
                         teal ? "text-white" : "text-ink"
                       }`}
                     >
@@ -179,7 +180,7 @@ export default function Programmes() {
                       src={IMAGES[p.image]}
                       alt={p.alt}
                       quality={95}
-                      sizes="(min-width: 768px) 520px, 84vw"
+                      sizes="(min-width: 768px) 42vw, 84vw"
                       className="fade-edges h-full w-full object-cover object-right-bottom md:h-auto"
                     />
                   </div>
